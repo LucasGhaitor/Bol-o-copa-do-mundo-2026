@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placares | Bolão Copa 2026</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/placares.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="brand">
+            <img src="assets/Image/trofeu.png" alt="Bolão Copa 2026">
+            <strong>BOLÃO COPA DO MUNDO 2026</strong>
+        </div>
+
+        <nav class="menu-header">
+            <a href="home.html">HOME</a>
+            <a href="partidas.html">PARTIDAS</a>
+            <a href="classificacao.html">CLASSIFICAÇÃO</a>
+                        <a
+                href="mata-mata-status.html"
+
+            >
+                MATA-MATA
+            </a>
+            <a href="grupos.html">PALPITE DOS GRUPOS</a>
+            <a href="mata-mata.html">PALPITE DO MATA-MATA</a>
+            <a href="placares.html" class="ativo">PLACARES</a>
+            <a href="perfil.html">MEU PERFIL</a>
+        </nav>
+
+        <button id="btnSair" class="btn-sair" type="button">SAIR</button>
+    </header>
+
+    <main class="placares-container">
+
+        <section class="placares-hero">
+            <span>Ranking do Bolão</span>
+            <h1>Placares</h1>
+            <p>
+                Acompanhe a pontuação dos participantes conforme os resultados reais forem cadastrados.
+                O ranking é calculado com base nos palpites da fase de grupos, melhores terceiros, mata-mata e Top 3 final.
+            </p>
+        </section>
+
+        <section class="resumo-placares">
+            <div class="resumo-card">
+                <span>Participantes</span>
+                <strong id="totalParticipantes">0</strong>
+                <p>Total de usuários participando do bolão.</p>
+            </div>
+
+            <div class="resumo-card destaque">
+                <span>Líder atual</span>
+                <strong id="liderAtual">--</strong>
+                <p>Participante com a maior pontuação no momento.</p>
+            </div>
+
+            <div class="resumo-card">
+                <span>Maior pontuação</span>
+                <strong id="maiorPontuacao">0</strong>
+                <p>Quantidade de pontos do primeiro colocado.</p>
+            </div>
+        </section>
+
+        <section class="aviso-pontuacao">
+            <div>
+                <strong>Como o ranking é atualizado?</strong>
+                <p>
+                    Os pontos aparecem conforme o administrador cadastra e finaliza os resultados reais dos jogos.
+                    Caso algum resultado seja alterado, a pontuação poderá ser recalculada automaticamente ao atualizar a página.
+                </p>
+            </div>
+
+            <button id="btnAtualizarRanking" type="button">
+                Atualizar ranking
+            </button>
+        </section>
+
+        <section class="ranking-section">
+            <div class="secao-titulo">
+                <span>Classificação</span>
+                <h2>Ranking dos participantes</h2>
+            </div>
+
+            <div id="listaRanking" class="lista-ranking">
+                <div class="loading-card">Calculando pontuação...</div>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/placares.js"></script>
+</body>
+</html>

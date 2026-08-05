@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Bolão Copa 2026</title>
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+  <main class="auth-container">
+    <section class="auth-card">
+      <h1>Login</h1>
+      <p>Acesse seus palpites</p>
+
+      <form id="formLogin">
+        <input type="text" id="usuario" placeholder="Nome de usuário" required />
+        <input type="password" id="senha" placeholder="Senha" required />
+
+        <button type="submit">Entrar</button>
+      </form>
+
+      <span id="mensagem"></span>
+
+      <div class="links-login">
+        <a href="cadastro.html">Criar conta</a>
+        <a href="#" id="abrirRecuperacao">Esqueci minha senha</a>
+        <a href="LoginAdmin.html">Sou administrador</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modalRecuperacao">
+    <div class="modal-content">
+      <h2>Recuperar senha</h2>
+      <p>Digite seu nome de usuário para enviarmos a recuperação ao e-mail cadastrado.</p>
+
+      <input type="text" id="usuarioRecuperacao" placeholder="Nome de usuário" />
+
+      <button id="btnRecuperarSenha">Enviar recuperação</button>
+      <button class="btn-secundario" id="fecharRecuperacao">Cancelar</button>
+
+      <span id="mensagemRecuperacao"></span>
+    </div>
+  </div>
+
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>

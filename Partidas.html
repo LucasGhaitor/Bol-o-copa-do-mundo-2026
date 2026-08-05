@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Partidas | Bolão Copa 2026</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/partidas.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="brand">
+            <img
+                src="assets/logo.png"
+                alt="Logo Bolão Copa 2026"
+                onerror="this.style.display='none'"
+            >
+            <strong>BOLÃO COPA DO MUNDO 2026</strong>
+        </div>
+
+        <nav class="menu-header">
+            <a href="home.html">HOME</a>
+            <a href="partidas.html" class="ativo">PARTIDAS</a>
+            <a href="classificacao.html">CLASSIFICAÇÃO</a>
+            <a href="mata-mata-status.html">MATA-MATA</a>
+            <a href="grupos.html">PALPITE DOS GRUPOS</a>
+            <a href="mata-mata.html">PALPITE DO MATA-MATA</a>
+            <a href="placares.html">PLACARES</a>
+            <a href="perfil.html">MEU PERFIL</a>
+        </nav>
+
+        <button id="btnSair" class="btn-sair" type="button">
+            SAIR
+        </button>
+    </header>
+
+    <main class="partidas-container">
+        <!-- HERO -->
+        <section class="partidas-hero">
+            <div class="partidas-hero-conteudo">
+                <span class="partidas-etiqueta">
+                    Copa do Mundo 2026
+                </span>
+
+                <h1>Partidas</h1>
+
+                <p>
+                    Acompanhe todos os jogos da competição, desde a fase de grupos
+                    até a grande final. Os confrontos do mata-mata serão atualizados
+                    conforme os resultados forem finalizados pelo administrador.
+                </p>
+            </div>
+
+            <div class="partidas-hero-destaque">
+                <strong>104 jogos</strong>
+                <span>
+                    Fase de grupos, 16 avos, oitavas, quartas, semifinais,
+                    disputa de 3º lugar e final.
+                </span>
+            </div>
+        </section>
+
+        <!-- RESUMO -->
+        <section class="resumo-partidas">
+            <div class="resumo-card">
+                <span>Fase de grupos</span>
+                <strong>72 jogos</strong>
+                <p>
+                    Jogos iniciais que definem os classificados e os melhores
+                    terceiros colocados.
+                </p>
+            </div>
+
+            <div class="resumo-card destaque">
+                <span>Mata-mata</span>
+                <strong>32 jogos</strong>
+                <p>
+                    Confrontos eliminatórios atualizados conforme os vencedores
+                    avançam de fase.
+                </p>
+            </div>
+
+            <div class="resumo-card">
+                <span>Resultados</span>
+                <strong>Ao vivo</strong>
+                <p>
+                    Os placares aparecem após serem salvos pelo administrador
+                    do bolão.
+                </p>
+            </div>
+        </section>
+
+        <!-- FILTROS -->
+        <section class="filtros-partidas">
+            <input
+                type="text"
+                id="buscaPartida"
+                placeholder="Buscar seleção, cidade, estádio ou grupo..."
+            >
+
+            <select id="filtroFase">
+                <option value="todas">Todas as fases</option>
+                <option value="fase de grupos">Fase de grupos</option>
+                <option value="16 avos">16 Avos</option>
+                <option value="oitavas">Oitavas</option>
+                <option value="quartas">Quartas</option>
+                <option value="semifinais">Semifinais</option>
+                <option value="disputa de 3º lugar">Disputa de 3º Lugar</option>
+                <option value="final">Final</option>
+            </select>
+
+            <select id="filtroGrupo">
+                <option value="todos">Todos os grupos</option>
+                <option value="grupo a">Grupo A</option>
+                <option value="grupo b">Grupo B</option>
+                <option value="grupo c">Grupo C</option>
+                <option value="grupo d">Grupo D</option>
+                <option value="grupo e">Grupo E</option>
+                <option value="grupo f">Grupo F</option>
+                <option value="grupo g">Grupo G</option>
+                <option value="grupo h">Grupo H</option>
+                <option value="grupo i">Grupo I</option>
+                <option value="grupo j">Grupo J</option>
+                <option value="grupo k">Grupo K</option>
+                <option value="grupo l">Grupo L</option>
+                <option value="mata-mata">Mata-mata</option>
+            </select>
+
+            <select id="filtroStatus">
+                <option value="todos">Todos os status</option>
+                <option value="finalizadas">Finalizadas</option>
+                <option value="resultado salvo">Resultado salvo</option>
+                <option value="em aberto">Em aberto</option>
+            </select>
+
+            <button
+                type="button"
+                id="btnLimparFiltros"
+                class="btn-limpar-filtros"
+            >
+                LIMPAR FILTROS
+            </button>
+        </section>
+
+        <!-- INFORMAÇÃO DOS FILTROS -->
+        <section class="resultado-filtros-partidas">
+            <div>
+                <span>Partidas exibidas</span>
+                <strong id="contadorPartidas">0 partidas encontradas</strong>
+            </div>
+
+            <p>
+                Use a busca ou os filtros para encontrar rapidamente um jogo da competição.
+            </p>
+        </section>
+
+        <!-- SEÇÃO DA LISTA -->
+        <section class="secao-partidas">
+            <div class="secao-titulo-partidas">
+                <div>
+                    <span>Calendário da Copa</span>
+                    <h2>Jogos da competição</h2>
+                </div>
+
+                <p>
+                    Os jogos do mata-mata aparecem com os times reais conforme a competição avança.
+                </p>
+            </div>
+
+            <div id="listaPartidas" class="lista-partidas">
+                <div class="estado-vazio">
+                    Carregando partidas...
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-partidas">
+        <p>
+            Bolão Copa do Mundo 2026 • Acompanhe partidas, resultados e classificação.
+        </p>
+    </footer>
+
+    <script type="module" src="js/partidas.js"></script>
+</body>
+</html>

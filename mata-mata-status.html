@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Chaveamento oficial do mata-mata da Copa do Mundo 2026 no Bolão."
+    >
+
+    <title>
+        Mata-Mata | Bolão Copa 2026
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/auth.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/mata-mata-status.css"
+    >
+</head>
+
+<body>
+
+    <header class="top-header">
+        <div class="brand">
+            <img
+                src="assets/Image/trofeu.png"
+                alt="Bolão Copa do Mundo 2026"
+            >
+
+            <strong>
+                BOLÃO COPA DO MUNDO 2026
+            </strong>
+        </div>
+
+        <nav class="menu-header">
+            <a href="home.html">
+                HOME
+            </a>
+
+            <a href="partidas.html">
+                PARTIDAS
+            </a>
+
+            <a href="classificacao.html">
+                CLASSIFICAÇÃO
+            </a>
+                        <a
+                href="mata-mata-status.html"
+                class="ativo"
+                aria-current="page"
+            >
+                MATA-MATA
+            </a>
+
+            <a href="grupos.html">
+                PALPITE DOS GRUPOS
+            </a>
+
+            <a href="mata-mata.html">
+                PALPITE DO MATA-MATA
+            </a>
+
+
+
+            <a href="placares.html">
+                PLACARES
+            </a>
+
+            <a href="perfil.html">
+                MEU PERFIL
+            </a>
+        </nav>
+
+        <button
+            id="btnSair"
+            class="btn-sair"
+            type="button"
+        >
+            SAIR
+        </button>
+    </header>
+
+    <main class="mata-status-container">
+
+        <section class="mata-hero">
+            <span class="mata-etiqueta">
+                Chaveamento oficial
+            </span>
+
+            <h1>
+                Mata-Mata
+            </h1>
+
+            <p>
+                Acompanhe os confrontos eliminatórios da Copa do Mundo 2026.
+                Os jogos são atualizados conforme os vencedores avançam de fase.
+            </p>
+        </section>
+
+        <section class="chaveamento-principal">
+
+            <div class="coluna-chave coluna-esquerda">
+                <div
+                    id="ladoEsquerdo16Avos"
+                    class="lista-confrontos"
+                >
+                    <div class="loading-chave">
+                        Carregando confrontos...
+                    </div>
+                </div>
+            </div>
+
+            <div class="centro-chaveamento">
+                <span>
+                    Chaveamento
+                </span>
+
+                <h2>
+                    Mata<br>mata
+                </h2>
+
+                <div class="circulo-classificadas">
+                    <strong>
+                        32
+                    </strong>
+
+                    <small>
+                        classificadas
+                    </small>
+                </div>
+
+                <div class="fase-atual">
+                    <strong>
+                        2ª fase
+                    </strong>
+
+                    <span>
+                        28/06 a 03/07
+                    </span>
+                </div>
+            </div>
+
+            <div class="coluna-chave coluna-direita">
+                <div
+                    id="ladoDireito16Avos"
+                    class="lista-confrontos"
+                >
+                    <div class="loading-chave">
+                        Carregando confrontos...
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="secao-proximas-fases">
+            <div class="secao-titulo-mata">
+                <span>
+                    Próximas fases
+                </span>
+
+                <h2>
+                    Caminho até a final
+                </h2>
+
+                <p>
+                    Conforme os resultados forem finalizados pelo administrador,
+                    os vencedores aparecerão automaticamente nas fases seguintes.
+                </p>
+            </div>
+
+            <div class="proximas-fases-grid">
+
+                <article class="fase-card">
+                    <div class="fase-card-topo">
+                        <span>
+                            Oitavas
+                        </span>
+
+                        <strong>
+                            Jogos 89 a 96
+                        </strong>
+                    </div>
+
+                    <div
+                        id="faseOitavas"
+                        class="fase-lista"
+                    >
+                        <div class="loading-chave">
+                            Aguardando classificados...
+                        </div>
+                    </div>
+                </article>
+
+                <article class="fase-card">
+                    <div class="fase-card-topo">
+                        <span>
+                            Quartas
+                        </span>
+
+                        <strong>
+                            Jogos 97 a 100
+                        </strong>
+                    </div>
+
+                    <div
+                        id="faseQuartas"
+                        class="fase-lista"
+                    >
+                        <div class="loading-chave">
+                            Aguardando classificados...
+                        </div>
+                    </div>
+                </article>
+
+                <article class="fase-card">
+                    <div class="fase-card-topo">
+                        <span>
+                            Semifinais
+                        </span>
+
+                        <strong>
+                            Jogos 101 e 102
+                        </strong>
+                    </div>
+
+                    <div
+                        id="faseSemifinais"
+                        class="fase-lista"
+                    >
+                        <div class="loading-chave">
+                            Aguardando classificados...
+                        </div>
+                    </div>
+                </article>
+
+                <article class="fase-card fase-final">
+                    <div class="fase-card-topo">
+                        <span>
+                            Final
+                        </span>
+
+                        <strong>
+                            Jogo 104
+                        </strong>
+                    </div>
+
+                    <div
+                        id="faseFinal"
+                        class="fase-lista"
+                    >
+                        <div class="loading-chave">
+                            Aguardando finalistas...
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="secao-campeao">
+            <div class="campeao-box">
+                <span>
+                    Campeão
+                </span>
+
+                <div
+                    id="campeaoBox"
+                    class="campeao-conteudo"
+                >
+                    <img
+                        src="assets/Icon/TBD.png"
+                        alt="Campeão a definir"
+                    >
+
+                    <strong>
+                        A definir
+                    </strong>
+                </div>
+            </div>
+
+            <div class="campeao-box">
+                <span>
+                    Vice-campeão
+                </span>
+
+                <div
+                    id="viceBox"
+                    class="campeao-conteudo"
+                >
+                    <img
+                        src="assets/Icon/TBD.png"
+                        alt="Vice-campeão a definir"
+                    >
+
+                    <strong>
+                        A definir
+                    </strong>
+                </div>
+            </div>
+
+            <div class="campeao-box">
+                <span>
+                    3º lugar
+                </span>
+
+                <div
+                    id="terceiroBox"
+                    class="campeao-conteudo"
+                >
+                    <img
+                        src="assets/Icon/TBD.png"
+                        alt="Terceiro lugar a definir"
+                    >
+
+                    <strong>
+                        A definir
+                    </strong>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape-mata">
+        <p>
+            Bolão Copa do Mundo 2026 — Chaveamento oficial do mata-mata
+        </p>
+    </footer>
+
+    <script
+        type="module"
+        src="js/mata-mata-status.js"
+    ></script>
+
+</body>
+</html>

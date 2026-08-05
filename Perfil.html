@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Meu Perfil | Bolão Copa 2026</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+
+<body>
+    <header class="top-header">
+        <div class="brand">
+            <img
+                src="assets/Image/trofeu.png"
+                alt="Bolão Copa 2026"
+            >
+
+            <strong>
+                BOLÃO COPA DO MUNDO 2026
+            </strong>
+        </div>
+
+        <nav class="menu-header">
+            <a href="home.html">
+                HOME
+            </a>
+
+            <a href="partidas.html">
+                PARTIDAS
+            </a>
+
+            <a href="classificacao.html">
+                CLASSIFICAÇÃO
+            </a>
+
+            <a href="mata-mata-status.html">
+                MATA-MATA
+            </a>
+
+            <a href="grupos.html">
+                PALPITE DOS GRUPOS
+            </a>
+
+            <a href="mata-mata.html">
+                PALPITE DO MATA-MATA
+            </a>
+
+            <a href="placares.html">
+                PLACARES
+            </a>
+
+            <a
+                href="perfil.html"
+                class="ativo"
+            >
+                MEU PERFIL
+            </a>
+        </nav>
+
+        <button
+            id="btnSair"
+            class="btn-sair"
+            type="button"
+        >
+            SAIR
+        </button>
+    </header>
+
+    <main class="perfil-container">
+        <!-- HERO DO PERFIL -->
+        <section class="perfil-hero">
+            <div class="perfil-info-principal">
+                <span>
+                    Meu Perfil
+                </span>
+
+                <h1 id="nomeUsuario">
+                    Carregando...
+                </h1>
+
+                <p id="usuarioEmail">
+                    Buscando informações da conta...
+                </p>
+            </div>
+
+            <div class="perfil-bandeira">
+                <img
+                    id="bandeiraUsuario"
+                    src="assets/Icon/TBD.png"
+                    alt="Bandeira do usuário"
+                >
+            </div>
+        </section>
+
+        <!-- RESUMO DO PERFIL -->
+        <section class="resumo-perfil">
+            <div class="resumo-card destaque">
+                <span>
+                    Pontuação atual
+                </span>
+
+                <strong id="pontosUsuario">
+                    ...
+                </strong>
+
+                <p>
+                    Pontos recalculados com base nos resultados finalizados até o momento.
+                </p>
+            </div>
+
+            <div class="resumo-card">
+                <span>
+                    Status dos grupos
+                </span>
+
+                <strong id="statusGrupos">
+                    --
+                </strong>
+
+                <p>
+                    Situação do seu palpite da fase de grupos.
+                </p>
+            </div>
+
+            <div class="resumo-card">
+                <span>
+                    Status mata-mata
+                </span>
+
+                <strong id="statusMataMata">
+                    --
+                </strong>
+
+                <p>
+                    Situação do seu palpite eliminatório.
+                </p>
+            </div>
+        </section>
+
+        <!-- STATUS DO BOLÃO -->
+        <section class="status-bolao-perfil">
+            <div>
+                <strong>
+                    Status do Bolão
+                </strong>
+
+                <p id="statusBolao">
+                    Carregando status do bolão...
+                </p>
+            </div>
+        </section>
+
+        <!-- PONTUAÇÃO POR GRUPO -->
+        <section class="secao-perfil">
+            <div class="secao-titulo">
+                <span>
+                    Transparência
+                </span>
+
+                <h2>
+                    Minha pontuação por grupo
+                </h2>
+
+                <p>
+                    Veja como seus pontos foram calculados com base na classificação
+                    provisória atual de cada grupo.
+                </p>
+            </div>
+
+            <div
+                id="pontuacaoGruposUsuario"
+                class="pontuacao-grupos-grid"
+            >
+                <div class="loading-card">
+                    Calculando sua pontuação por grupo...
+                </div>
+            </div>
+        </section>
+
+        <!-- PONTUAÇÃO DO MATA-MATA -->
+        <section class="secao-perfil">
+            <div class="secao-titulo">
+                <span>
+                    Transparência
+                </span>
+
+                <h2>
+                    Minha pontuação no mata-mata
+                </h2>
+
+                <p>
+                    Veja quais seleções você escolheu para avançar em cada fase
+                    e quais estão pontuando conforme os resultados reais.
+                </p>
+            </div>
+
+            <div
+                id="pontuacaoMataMataUsuario"
+                class="pontuacao-mata-mata-grid"
+            >
+                <div class="loading-card">
+                    Calculando sua pontuação no mata-mata...
+                </div>
+            </div>
+        </section>
+
+        <!-- TOP 3 -->
+        <section class="secao-perfil">
+            <div class="secao-titulo">
+                <span>
+                    Resumo final
+                </span>
+
+                <h2>
+                    Meu Top 3
+                </h2>
+
+                <p>
+                    Confira suas escolhas para campeão, vice-campeão e terceiro lugar.
+                </p>
+            </div>
+
+            <div
+                id="top3Usuario"
+                class="top3-grid"
+            >
+                <div class="empty-card">
+                    Você ainda não finalizou o mata-mata.
+                </div>
+            </div>
+        </section>
+
+        <!-- MELHORES TERCEIROS -->
+        <section class="secao-perfil">
+            <div class="secao-titulo">
+                <span>
+                    Melhores terceiros
+                </span>
+
+                <h2>
+                    Meus 8 terceiros escolhidos
+                </h2>
+
+                <p>
+                    Veja os grupos que você escolheu como melhores terceiros colocados.
+                </p>
+            </div>
+
+            <div
+                id="melhoresTerceirosUsuario"
+                class="terceiros-grid"
+            >
+                <div class="empty-card">
+                    Você ainda não selecionou os melhores terceiros.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script
+        type="module"
+        src="js/perfil.js"
+    ></script>
+</body>
+
+</html>

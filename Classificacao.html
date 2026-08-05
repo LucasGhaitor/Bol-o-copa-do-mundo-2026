@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação | Bolão Copa 2026</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/classificacao.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="brand">
+            <img src="assets/Image/trofeu.png" alt="Bolão Copa 2026">
+            <strong>BOLÃO COPA DO MUNDO 2026</strong>
+        </div>
+
+        <nav class="menu-header">
+            <a href="home.html">HOME</a>
+            <a href="partidas.html">PARTIDAS</a>
+            <a href="classificacao.html" class="ativo">CLASSIFICAÇÃO</a>
+                        <a
+                href="mata-mata-status.html"
+                
+            >
+                MATA-MATA
+            </a>
+            <a href="grupos.html">PALPITE DOS GRUPOS</a>
+            <a href="mata-mata.html">PALPITE DO MATA-MATA</a>
+            <a href="placares.html">PLACARES</a>
+            <a href="perfil.html">MEU PERFIL</a>
+        </nav>
+
+        <button id="btnSair" class="btn-sair" type="button">SAIR</button>
+    </header>
+
+    <main class="classificacao-container">
+
+        <section class="classificacao-hero">
+            <span>Classificação Real</span>
+            <h1>Grupos da Copa 2026</h1>
+            <p>
+                Acompanhe a classificação real dos grupos conforme os resultados forem cadastrados pelo administrador.
+                Os dois primeiros de cada grupo avançam, além dos oito melhores terceiros colocados.
+            </p>
+        </section>
+
+        <section class="resumo-classificacao">
+            <div class="resumo-card">
+                <span>Jogos finalizados</span>
+                <strong id="jogosFinalizados">0</strong>
+                <p>Partidas da fase de grupos com resultado confirmado.</p>
+            </div>
+
+            <div class="resumo-card">
+                <span>Total de grupos</span>
+                <strong id="totalGrupos">12</strong>
+                <p>Grupos oficiais da Copa do Mundo 2026.</p>
+            </div>
+
+            <div class="resumo-card">
+                <span>Status geral</span>
+                <strong id="statusGeral">Carregando...</strong>
+                <p>Situação atual da classificação dos grupos.</p>
+            </div>
+        </section>
+
+        <section class="legenda-classificacao">
+            <div>
+                <span class="bolinha verde"></span>
+                Classificado direto
+            </div>
+
+            <div>
+                <span class="bolinha azul"></span>
+                Zona dos melhores terceiros
+            </div>
+
+            <div>
+                <span class="bolinha cinza"></span>
+                Fora da zona de classificação
+            </div>
+        </section>
+
+        <section class="grupos-classificacao">
+            <div class="secao-titulo">
+                <span>Grupos</span>
+                <h2>Classificação por grupo</h2>
+            </div>
+
+            <div id="listaGruposClassificacao" class="lista-grupos">
+                <div class="loading-card">
+                    Carregando classificação...
+                </div>
+            </div>
+        </section>
+
+        <section class="melhores-terceiros">
+            <div class="secao-titulo">
+                <span>Melhores terceiros</span>
+                <h2>Disputa pelas últimas vagas</h2>
+                <p>
+                    Os oito melhores terceiros colocados avançam para o mata-mata.
+                </p>
+            </div>
+
+            <div id="listaMelhoresTerceiros" class="lista-terceiros">
+                <div class="loading-card">
+                    Carregando melhores terceiros...
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/classificacao.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Admin | Bolão Copa 2026</title>
+  <link rel="stylesheet" href="css/auth.css" />
+</head>
+<body>
+  <main class="auth-container">
+    <section class="auth-card admin">
+      <h1>Área Admin</h1>
+      <p>Acesso restrito ao administrador</p>
+
+      <form id="formAdminLogin">
+        <input type="text" id="usuario" placeholder="Usuário admin" required />
+        <input type="password" id="senha" placeholder="Senha" required />
+
+        <button type="submit">Entrar como admin</button>
+      </form>
+
+      <span id="mensagem"></span>
+
+      <a href="login.html">Voltar para login comum</a>
+    </section>
+  </main>
+
+  <script type="module" src="js/loginAdmin.js"></script>
+</body>
+</html>

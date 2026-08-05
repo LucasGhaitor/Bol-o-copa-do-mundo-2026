@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Bolão Copa 2026</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <header class="topo-site">
+        <div class="topo-logo">
+            <img src="assets/Image/Logo1.png" alt="Troféu Copa 2026">
+            <div>
+                <strong>Bolão</strong>
+                <span>Copa 2026</span>
+            </div>
+        </div>
+
+        <nav class="menu-site">
+            <a href="home.html" class="ativo">HOME</a>
+            <a href="partidas.html">PARTIDAS</a>
+            <a href="classificacao.html">CLASSIFICAÇÃO</a>
+            <a href="mata-mata-status.html">MATA-MATA</a>
+            <a href="grupos.html">PALPITE DOS GRUPOS</a>
+            <a href="mata-mata.html">PALPITE DO MATA-MATA</a>
+            <a href="placares.html">PLACARES</a>
+            <a href="perfil.html">PERFIL</a>
+        </nav>
+
+        <button id="btnSair" class="btn-sair" type="button">Sair</button>
+    </header>
+
+    <main class="home-container">
+
+        <section class="home-hero">
+            <div class="hero-topo">
+                <div class="hero-titulo">
+                    <span>Bracket Challenge</span>
+                    <h1>Copa 2026</h1>
+                    <p>Olá, <strong id="nomeUsuario">Carregando...</strong></p>
+                </div>
+
+                <div class="hero-bandeira">
+                    <img id="bandeiraUsuario" src="assets/Icon/TBD.png" alt="Bandeira do usuário">
+                </div>
+            </div>
+
+            <div class="hero-info-card status-card-hero">
+                <span>Status do Bolão</span>
+                <strong id="statusBolao">Carregando...</strong>
+                <p id="mensagemBolao">
+                    Aguarde enquanto verificamos se os palpites estão liberados.
+                </p>
+            </div>
+
+            <div class="hero-info-card">
+                <span>Copa do Mundo 2026</span>
+                <strong>A maior Copa da história</strong>
+                <p>
+                    A Copa do Mundo FIFA 2026 será realizada nos Estados Unidos, México e Canadá,
+                    com 48 seleções participantes, tornando-se a maior edição da história do torneio.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao-home regras-pontuacao">
+            <div class="secao-header">
+                <span>Pontuação</span>
+                <h2>Como funciona a pontuação?</h2>
+                <p>
+                    Os pontos são calculados conforme os resultados reais forem cadastrados no sistema.
+                    Quanto mais avançada a fase, maior será a pontuação por acerto.
+                </p>
+            </div>
+
+            <div class="pontuacao-grid">
+                <div class="pontuacao-card">
+                    <small>Fase de grupos</small>
+                    <h3>1º lugar exato</h3>
+                    <strong>5 pts</strong>
+                    <p>Acertar exatamente quem termina em primeiro no grupo.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Fase de grupos</small>
+                    <h3>2º lugar exato</h3>
+                    <strong>4 pts</strong>
+                    <p>Acertar exatamente quem termina em segundo no grupo.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Fase de grupos</small>
+                    <h3>3º lugar exato</h3>
+                    <strong>3 pts</strong>
+                    <p>Acertar exatamente quem termina em terceiro no grupo.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Fase de grupos</small>
+                    <h3>Posição diferente</h3>
+                    <strong>2 pts</strong>
+                    <p>Acertar o time no top 3 do grupo, mas em outra posição.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Melhores terceiros</small>
+                    <h3>Grupo correto</h3>
+                    <strong>3 pts</strong>
+                    <p>Acertar quais grupos terão os melhores terceiros colocados.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Mata-mata</small>
+                    <h3>16 avos</h3>
+                    <strong>2 pts</strong>
+                    <p>Acertar quem avança nos primeiros confrontos eliminatórios.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Mata-mata</small>
+                    <h3>Oitavas</h3>
+                    <strong>4 pts</strong>
+                    <p>Acertar quem avança nas oitavas de final.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Mata-mata</small>
+                    <h3>Quartas</h3>
+                    <strong>6 pts</strong>
+                    <p>Acertar quem avança para a semifinal.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Mata-mata</small>
+                    <h3>Semifinais</h3>
+                    <strong>8 pts</strong>
+                    <p>Acertar quem chega à grande final.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Final</small>
+                    <h3>Campeão</h3>
+                    <strong>15 pts</strong>
+                    <p>Acertar a seleção campeã da Copa do Mundo.</p>
+                </div>
+
+                <div class="pontuacao-card">
+                    <small>Top 3</small>
+                    <h3>Vice-campeão</h3>
+                    <strong>10 pts</strong>
+                    <p>Acertar a seleção que termina em segundo lugar.</p>
+                </div>
+
+                <div class="pontuacao-card destaque">
+                    <small>Bônus</small>
+                    <h3>Top 3 completo</h3>
+                    <strong>20 pts</strong>
+                    <p>Acertar campeão, vice-campeão e terceiro lugar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-home">
+            <div class="secao-header">
+                <span>Curiosidade</span>
+                <h2>A primeira Copa com três países-sede</h2>
+                <p>
+                    A edição de 2026 será histórica por reunir três países anfitriões:
+                    Canadá, México e Estados Unidos. Além disso, o torneio terá 48 seleções,
+                    ampliando a disputa e trazendo mais jogos para os torcedores.
+                </p>
+            </div>
+
+            <div class="info-grande">
+                <h3>Um torneio maior, mais longo e mais competitivo</h3>
+                <p>
+                    Com mais seleções participantes, a Copa de 2026 terá mais oportunidades para países
+                    de diferentes continentes disputarem o maior torneio de futebol do mundo. Para o bolão,
+                    isso também deixa os palpites mais desafiadores e divertidos.
+                </p>
+            </div>
+        </section>
+
+        <section class="secao-home">
+            <div class="secao-header">
+                <span>Países-sede</span>
+                <h2>Canadá, México e Estados Unidos</h2>
+                <p>
+                    Três países, três culturas e uma Copa do Mundo gigante. Cada país-sede terá papel importante
+                    na realização do torneio e na experiência dos torcedores.
+                </p>
+            </div>
+
+            <div class="paises-grid">
+                <div class="pais-card">
+                    <img src="assets/Icon/CAN.png" alt="Bandeira do Canadá">
+                    <h3>Canadá</h3>
+                    <p>
+                        Conhecido por suas paisagens naturais, clima frio e paixão crescente pelo futebol,
+                        o Canadá será um dos anfitriões da Copa 2026.
+                    </p>
+                </div>
+
+                <div class="pais-card">
+                    <img src="assets/Icon/MEX.png" alt="Bandeira do México">
+                    <h3>México</h3>
+                    <p>
+                        O México tem forte tradição no futebol e será novamente palco de jogos de Copa do Mundo,
+                        com uma torcida vibrante e apaixonada.
+                    </p>
+                </div>
+
+                <div class="pais-card">
+                    <img src="assets/Icon/USA.png" alt="Bandeira dos Estados Unidos">
+                    <h3>Estados Unidos</h3>
+                    <p>
+                        Os Estados Unidos receberão grande parte dos jogos e contam com estádios modernos,
+                        grandes cidades e estrutura para eventos internacionais.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-home">
+            <div class="secao-header">
+                <span>Formato</span>
+                <h2>Como será a Copa 2026?</h2>
+                <p>
+                    O formato da Copa 2026 terá 48 seleções divididas em 12 grupos com 4 equipes.
+                    Avançam os dois primeiros de cada grupo e os 8 melhores terceiros colocados.
+                </p>
+            </div>
+
+            <div class="formato-grid">
+                <div class="formato-card">
+                    <strong>48</strong>
+                    <span>Seleções</span>
+                    <p>A maior quantidade de participantes em uma edição da Copa.</p>
+                </div>
+
+                <div class="formato-card">
+                    <strong>12</strong>
+                    <span>Grupos</span>
+                    <p>Cada grupo terá quatro seleções disputando a classificação.</p>
+                </div>
+
+                <div class="formato-card">
+                    <strong>32</strong>
+                    <span>Classificados</span>
+                    <p>Avançam para o mata-mata os melhores colocados da fase de grupos.</p>
+                </div>
+
+                <div class="formato-card">
+                    <strong>104</strong>
+                    <span>Jogos</span>
+                    <p>Uma edição maior, com mais partidas e mais possibilidades no bolão.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-home mascote-secao canada">
+            <div class="mascote-conteudo">
+                <div>
+                    <span>Canadá</span>
+                    <h2>Maple™ — O Alce</h2>
+                    <p>
+                        Maple™ representa o Canadá e carrega uma identidade ligada à natureza,
+                        à força e à energia do país. O alce é um animal marcante da fauna canadense,
+                        e o nome também faz referência à folha de bordo, um dos principais símbolos do Canadá.
+                    </p>
+
+                    <div class="curiosidade-box">
+                        <strong>Curiosidade</strong>
+                        <p>
+                            O Canadá terá a chance de apresentar sua cultura para torcedores do mundo inteiro
+                            em uma Copa histórica e compartilhada com outros dois países da América do Norte.
+                        </p>
+                    </div>
+                </div>
+
+                <img src="assets/Image/Maple.jpg" alt="Maple, mascote do Canadá">
+            </div>
+        </section>
+
+        <section class="secao-home mascote-secao mexico">
+            <div class="mascote-conteudo invertido">
+                <img src="assets/Image/Zayu.jpg" alt="Zayu, mascote do México">
+
+                <div>
+                    <span>México</span>
+                    <h2>Zayu™ — A Onça-Pintada</h2>
+                    <p>
+                        Zayu™ representa o México e simboliza energia, velocidade e presença.
+                        A onça-pintada tem forte ligação com a fauna e com elementos culturais da região,
+                        tornando o mascote uma representação marcante do país.
+                    </p>
+
+                    <div class="curiosidade-box">
+                        <strong>Curiosidade</strong>
+                        <p>
+                            O México é um país com enorme paixão pelo futebol e já recebeu edições anteriores
+                            da Copa do Mundo, ficando marcado por jogos históricos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-home mascote-secao eua">
+            <div class="mascote-conteudo">
+                <div>
+                    <span>Estados Unidos</span>
+                    <h2>Clutch™ — A Águia</h2>
+                    <p>
+                        Clutch™ representa os Estados Unidos. A águia é um símbolo muito associado ao país
+                        e transmite ideia de liderança, visão e competitividade, combinando com o clima
+                        decisivo da Copa.
+                    </p>
+
+                    <div class="curiosidade-box">
+                        <strong>Curiosidade</strong>
+                        <p>
+                            Os Estados Unidos receberão jogos em grandes cidades e estádios de enorme capacidade,
+                            reforçando o tamanho e a estrutura desta edição.
+                        </p>
+                    </div>
+                </div>
+
+                <img src="assets/Image/Clutch.jpg" alt="Clutch, mascote dos Estados Unidos">
+            </div>
+        </section>
+
+        <section class="secao-home brasil-secao">
+            <div class="brasil-conteudo">
+                <div>
+                    <span>Seleção Brasileira</span>
+                    <h2>História da Seleção Brasileira</h2>
+                    <p>
+                        A Seleção Brasileira é uma das maiores protagonistas da história da Copa do Mundo.
+                        Reconhecida mundialmente pelo futebol ofensivo, por grandes craques e por momentos
+                        inesquecíveis, o Brasil carrega uma tradição única no torneio.
+                    </p>
+
+                    <p>
+                        Para muitos torcedores, acompanhar a Copa é também reviver memórias marcantes da amarelinha:
+                        títulos, gols históricos, ídolos eternos e a esperança de mais uma grande campanha.
+                    </p>
+
+                    <div class="brasil-destaques">
+                        <div>
+                            <strong>5x</strong>
+                            <span>Campeão mundial</span>
+                        </div>
+
+                        <div>
+                            <strong>Tradição</strong>
+                            <span>Presença marcante em Copas</span>
+                        </div>
+
+                        <div>
+                            <strong>Paixão</strong>
+                            <span>Torcida espalhada pelo mundo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="assets/Image/Brasil.png" alt="Seleção Brasileira">
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/home.js"></script>
+</body>
+</html>

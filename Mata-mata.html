@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palpite do Mata-mata | Bolão Copa 2026</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/mata-mata.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="brand">
+            <img src="assets/Image/trofeu.png" alt="Bolão Copa 2026">
+            <strong>BOLÃO COPA DO MUNDO 2026</strong>
+        </div>
+
+        <nav class="menu-header">
+            <a href="home.html">HOME</a>
+            <a href="partidas.html">PARTIDAS</a>
+            <a href="classificacao.html">CLASSIFICAÇÃO</a>
+                        <a
+                href="mata-mata-status.html"
+
+            >
+                MATA-MATA
+            </a>
+            <a href="grupos.html">PALPITE DOS GRUPOS</a>
+            <a href="mata-mata.html" class="ativo">PALPITE DO MATA-MATA</a>
+            <a href="placares.html">PLACARES</a>
+            <a href="perfil.html">MEU PERFIL</a>
+        </nav>
+
+        <button id="btnSair" class="btn-sair" type="button">SAIR</button>
+    </header>
+
+    <main class="mata-container">
+
+        <section class="mata-hero">
+            <span>Palpite do Mata-mata</span>
+            <h1>Monte seu caminho até a final</h1>
+            <p>
+                Primeiro escolha os 8 melhores terceiros colocados. Depois avance seleção por seleção
+                até definir campeão, vice-campeão e terceiro lugar.
+            </p>
+        </section>
+
+        <section class="aviso-mata" id="avisoMata">
+            <div>
+                <strong>Status do mata-mata</strong>
+                <p id="mensagemStatus">Carregando informações...</p>
+            </div>
+
+            <button id="btnSalvarMataMata" class="btn-salvar-mata" type="button">
+                Salvar mata-mata
+            </button>
+        </section>
+
+        <section class="etapa-terceiros">
+            <div class="secao-titulo">
+                <span>Etapa 1</span>
+                <h2>Escolha os 8 melhores terceiros</h2>
+                <p>
+                    Selecione exatamente 8 grupos. O terceiro colocado desses grupos avançará para o mata-mata.
+                </p>
+            </div>
+
+            <div id="contadorTerceiros" class="contador-terceiros">
+                0 de 8 selecionados
+            </div>
+
+            <div id="listaTerceiros" class="lista-terceiros">
+                <div class="loading-card">Carregando terceiros colocados...</div>
+            </div>
+        </section>
+
+        <section class="etapa-bracket">
+            <div class="secao-titulo">
+                <span>Etapa 2</span>
+                <h2>Escolha os classificados</h2>
+                <p>
+                    Clique na seleção vencedora de cada confronto para avançar no chaveamento.
+                </p>
+            </div>
+
+            <div id="bracketMataMata" class="bracket-mata">
+                <div class="loading-card">Carregando chaveamento...</div>
+            </div>
+        </section>
+
+        <section class="resumo-final">
+            <div class="secao-titulo">
+                <span>Resumo</span>
+                <h2>Seu Top 3</h2>
+            </div>
+
+            <div id="resumoTop3" class="top3-grid">
+                <div class="empty-card">Escolha os vencedores até a final para ver seu Top 3.</div>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/mata-mata.js"></script>
+</body>
+</html>

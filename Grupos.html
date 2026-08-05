@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palpite dos Grupos | Bolão Copa 2026</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/grupos.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="brand">
+            <img src="assets/Image/trofeu.png" alt="Bolão Copa 2026">
+            <strong>BOLÃO COPA DO MUNDO 2026</strong>
+        </div>
+
+        <nav class="menu-header">
+            <a href="home.html">HOME</a>
+            <a href="partidas.html">PARTIDAS</a>
+            <a href="classificacao.html">CLASSIFICAÇÃO</a>
+                        <a
+                href="mata-mata-status.html"
+
+            >
+                MATA-MATA
+            </a>
+            <a href="grupos.html" class="ativo">PALPITE DOS GRUPOS</a>
+            <a href="mata-mata.html">PALPITE DO MATA-MATA</a>
+            <a href="placares.html">PLACARES</a>
+            <a href="perfil.html">MEU PERFIL</a>
+        </nav>
+
+        <button id="btnSair" class="btn-sair" type="button">SAIR</button>
+    </header>
+
+    <main class="grupos-container">
+
+        <section class="grupos-hero">
+            <span>Palpite dos Grupos</span>
+            <h1>Monte sua classificação</h1>
+            <p>
+                Arraste as seleções dentro de cada grupo para definir quem ficará em 1º, 2º, 3º e 4º lugar.
+                Essa ordem será usada para calcular sua pontuação durante a Copa.
+            </p>
+        </section>
+
+        <section class="aviso-grupos" id="avisoGrupos">
+            <div>
+                <strong>Status dos palpites</strong>
+                <p id="mensagemStatus">
+                    Carregando status do bolão...
+                </p>
+            </div>
+
+            <button id="btnSalvarGrupos" class="btn-salvar-grupos" type="button">
+                Salvar palpites dos grupos
+            </button>
+        </section>
+
+        <section class="instrucoes-grupos">
+            <div class="instrucao-card">
+                <span>1º</span>
+                <p>Primeiro colocado do grupo</p>
+            </div>
+
+            <div class="instrucao-card">
+                <span>2º</span>
+                <p>Segundo colocado do grupo</p>
+            </div>
+
+            <div class="instrucao-card">
+                <span>3º</span>
+                <p>Terceiro colocado do grupo</p>
+            </div>
+
+            <div class="instrucao-card">
+                <span>4º</span>
+                <p>Quarto colocado do grupo</p>
+            </div>
+        </section>
+
+        <section class="lista-grupos-palpite" id="listaGrupos">
+            <div class="loading-card">
+                Carregando grupos...
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.2/Sortable.min.js"></script>
+    <script type="module" src="js/grupos.js"></script>
+</body>
+</html>

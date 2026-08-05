@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | Bolão Copa 2026</title>
+
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="brand">
+            <img src="assets/Image/trofeu.png" alt="Bolão Copa 2026">
+            <strong>PAINEL ADMINISTRATIVO</strong>
+        </div>
+
+        <nav class="menu-header">
+            <a href="admin.html" class="ativo">ADMIN</a>
+            <a href="admin-resultados.html">RESULTADOS</a>
+            <a href="home.html">SITE</a>
+            <a href="partidas.html">PARTIDAS</a>
+            <a href="placares.html">PLACARES</a>
+        </nav>
+
+        <button id="btnSair" class="btn-sair" type="button">SAIR</button>
+    </header>
+
+    <main class="admin-container">
+
+        <section class="admin-hero">
+            <span>Área administrativa</span>
+            <h1>Painel Admin</h1>
+            <p>
+                Gerencie o status do bolão, acompanhe usuários cadastrados,
+                ajuste permissões e acesse rapidamente as telas de resultados, partidas e ranking.
+            </p>
+        </section>
+
+        <section class="admin-resumo">
+            <div class="resumo-card destaque">
+                <span>Status do bolão</span>
+                <strong id="statusBolao">Carregando...</strong>
+                <p>Define se os participantes podem salvar ou alterar palpites.</p>
+            </div>
+
+            <div class="resumo-card">
+                <span>Usuários cadastrados</span>
+                <strong id="totalUsuarios">0</strong>
+                <p>Total de participantes encontrados no Firestore.</p>
+            </div>
+
+            <div class="resumo-card">
+                <span>Administradores</span>
+                <strong id="totalAdmins">0</strong>
+                <p>Usuários com permissão administrativa.</p>
+            </div>
+        </section>
+
+        <section class="admin-acoes-grid">
+
+            <article class="admin-card controle-bolao">
+                <div class="card-topo">
+                    <span>Controle</span>
+                    <h2>Status do Bolão</h2>
+                </div>
+
+                <p id="mensagem">
+                    Carregando configuração do bolão...
+                </p>
+
+                <div class="botoes-controle">
+                    <button id="btnAbrirBolao" class="btn-admin azul" type="button">
+                        Abrir palpites
+                    </button>
+
+                    <button id="btnFecharBolao" class="btn-admin laranja" type="button">
+                        Fechar palpites
+                    </button>
+                </div>
+            </article>
+
+            <article class="admin-card">
+                <div class="card-topo">
+                    <span>Resultados</span>
+                    <h2>Cadastrar placares</h2>
+                </div>
+
+                <p>
+                    Informe os placares oficiais dos jogos e finalize partidas para atualizar ranking e classificação.
+                </p>
+
+                <a class="link-admin" href="admin-resultados.html">
+                    Ir para resultados
+                </a>
+            </article>
+
+            <article class="admin-card">
+                <div class="card-topo">
+                    <span>Consulta</span>
+                    <h2>Ver partidas</h2>
+                </div>
+
+                <p>
+                    Acesse a lista pública de jogos e confira os placares exibidos para os participantes.
+                </p>
+
+                <a class="link-admin" href="partidas.html">
+                    Ver partidas
+                </a>
+            </article>
+
+            <article class="admin-card">
+                <div class="card-topo">
+                    <span>Ranking</span>
+                    <h2>Ver placares</h2>
+                </div>
+
+                <p>
+                    Confira a pontuação dos participantes e acompanhe o ranking atualizado do bolão.
+                </p>
+
+                <a class="link-admin" href="placares.html">
+                    Ver ranking
+                </a>
+            </article>
+
+        </section>
+
+        <section class="usuarios-section">
+            <div class="secao-titulo">
+                <span>Participantes</span>
+                <h2>Usuários cadastrados</h2>
+                <p>
+                    Edite pontos, altere permissões e acompanhe os participantes do bolão.
+                </p>
+            </div>
+
+            <div class="filtros-admin">
+                <div class="campo-filtro">
+                    <label for="buscaUsuario">Buscar usuário</label>
+                    <input id="buscaUsuario" type="text" placeholder="Nome, usuário ou e-mail">
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="filtroTipo">Tipo</label>
+                    <select id="filtroTipo">
+                        <option value="todos">Todos</option>
+                        <option value="usuario">Usuários</option>
+                        <option value="admin">Admins</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="listaUsuarios" class="lista-usuarios">
+                <div class="loading-card">Carregando usuários...</div>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

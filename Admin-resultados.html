@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Painel administrativo para atualização dos resultados do Bolão Copa do Mundo 2026.">
+    <title> Administrar Resultados | Bolão Copa 2026 </title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/admin-resultados.css"> </head>
+
+<body>
+    <header class="top-header">
+        <div class="brand"> <img src="assets/img/trofeu.png" alt="Bolão Copa do Mundo 2026"> <strong> BOLÃO COPA DO MUNDO 2026 </strong> </div>
+        <nav class="menu-header"> <a href="home.html"> HOME </a> <a href="partidas.html"> PARTIDAS </a> <a href="classificacao.html"> CLASSIFICAÇÃO </a> <a href="placares.html"> PLACARES </a> <a href="admin.html"> ADMINISTRAÇÃO </a> <a href="admin-resultados.html" class="ativo"
+            aria-current="page"> RESULTADOS </a> </nav>
+        <button id="btnSair" class="btn-sair" type="button"> SAIR </button>
+    </header>
+    <main class="admin-resultados-container">
+        <section class="admin-hero">
+            <div class="admin-hero-conteudo"> <span class="admin-etiqueta"> Área administrativa </span>
+                <h1> Atualização de resultados </h1>
+                <p> Informe os placares das partidas e marque como finalizadas apenas quando o resultado estiver confirmado. Os jogos finalizados entram no cálculo da classificação e da pontuação dos participantes. </p>
+            </div>
+            <div class="admin-hero-destaque"> <strong> Atenção </strong>
+                <p> Antes de salvar, confira o placar, as seleções e o status da partida. </p>
+            </div>
+        </section>
+        <section class="painel-informativo">
+            <article class="informativo-card"> <span> Resultado provisório </span> <strong> Salvo </strong>
+                <p> O placar fica registrado, mas ainda não entra na pontuação enquanto a partida não estiver marcada como finalizada. </p>
+            </article>
+            <article class="informativo-card destaque"> <span> Resultado final </span> <strong> Finalizado </strong>
+                <p> A partida passa a compor a classificação e recalcula os pontos dos participantes. </p>
+            </article>
+            <article class="informativo-card"> <span> Correções </span> <strong> Permitidas </strong>
+                <p> Um resultado pode ser corrigido e salvo novamente pelo administrador. </p>
+            </article>
+        </section>
+        <section class="filtros-admin">
+            <div class="campo-busca-admin">
+                <label for="buscaPartida" class="sr-only"> Buscar partida </label>
+                <input id="buscaPartida" type="search" placeholder="Buscar seleção, cidade, estádio ou grupo..." autocomplete="off" spellcheck="false"> </div>
+            <div class="campo-fase-admin">
+                <label for="filtroFase" class="sr-only"> Filtrar por fase </label>
+                <select id="filtroFase">
+                    <option value="todas"> Todas as fases </option>
+                    <option value="Fase de Grupos"> Fase de Grupos </option>
+                    <option value="16 Avos"> 16 Avos </option>
+                    <option value="Oitavas"> Oitavas de final </option>
+                    <option value="Quartas"> Quartas de final </option>
+                    <option value="Semifinais"> Semifinais </option>
+                    <option value="Disputa de 3º Lugar"> Disputa de 3º lugar </option>
+                    <option value="Final"> Final </option>
+                </select>
+            </div>
+            <button id="btnLimparFiltros" class="btn-limpar-filtros" type="button"> LIMPAR FILTROS </button>
+        </section>
+        <section class="resultado-filtros">
+            <div> <span> Partidas exibidas </span> <strong id="contadorPartidas"> 0 partidas encontradas </strong> </div>
+            <p> Digite no campo de busca ou selecione uma fase para localizar rapidamente uma partida. </p>
+        </section>
+        <div id="mensagem" class="mensagem-admin" role="status" aria-live="polite" hidden></div>
+        <section class="secao-resultados-admin">
+            <div class="secao-titulo-admin">
+                <div> <span> Jogos da competição </span>
+                    <h2> Gerenciar placares </h2> </div>
+                <p> Preencha os dois placares, escolha se a partida está finalizada e clique em salvar resultado. </p>
+            </div>
+            <div id="listaPartidas" class="lista-partidas-admin">
+                <div class="estado-vazio"> Carregando partidas e resultados... </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape-admin">
+        <p> Painel administrativo — Bolão Copa do Mundo 2026 </p>
+    </footer>
+    <script type="module" src="js/admin-resultados.js"></script>
+</body>
+
+</html>
